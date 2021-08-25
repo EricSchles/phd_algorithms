@@ -22,5 +22,9 @@ I'm going to use the supporting material from MIT and stanford to review all the
 
 I will upload all of my notes, code, and attempts at the various homework assignments.  Correct solutions will be attempted, but I make no claim that my solutions are in fact correct, as I am still learning the material.
 
+## Learning Material
 
+* textbook - https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844
+* reference implementations - https://github.com/TheAlgorithms/Python
+* solutions - https://github.com/walkccc/CLRS
 
