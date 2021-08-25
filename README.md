@@ -4,6 +4,8 @@ The goal of this repo is to serve as a memorialization of the algorithms class I
 
 ## Supporting Material
 
+[khan academy](https://www.khanacademy.org/computing/computer-science/algorithms)
+
 [mit year one part one](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-notes/)
 
 [mit year one part two](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
