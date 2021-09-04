@@ -82,8 +82,26 @@ def get_two_to_the_n():
         "century": 100 * 24 * 365 * 60 * 60 * math.log2(microseconds_in_a_second)
     }
 
+def max_steps(size):
+    product = 1
+    count = 0
+    for i in range(2, size):
+        product *= i
+        if product > size:
+            return count
+        count += 1
+        
 def get_n_factorial():
     # there is no inverse for the factorial :(
     # I could approximate it, but python might not be up for the challenge.
-    pass
+    microseconds_in_a_second = 1e6    
+    return {
+        "second": max_steps(1 * microseconds_in_a_second),
+        "minute": max_steps(60 * microseconds_in_a_second),
+        "hour": max_steps(60 * 60 * microseconds_in_a_second),
+        "month": max_steps(24 * 30 * 60 * 60 * microseconds_in_a_second),
+        "year": max_steps(24 * 365 * 60 * 60 * microseconds_in_a_second),
+        "century": max_steps(100 * 24 * 365 * 60 * 60 * microseconds_in_a_second)
+    }
+
 
