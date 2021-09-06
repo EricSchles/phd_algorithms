@@ -29,3 +29,11 @@ if __name__ == '__main__':
     sorted_list.sort()
     assert selection_sort(listing) == sorted_list
 
+# Loop invariant:
+
+# The subarray A[i..j-1] is sorted.
+
+# It only needs to run for the first n-1 elements because the nth element will automatically be sorted by the time it gets there, since all the other n-1 elements are guaranteed to be smaller than it.
+
+# Worst case running time: O(n**2)
+# best case: O(n**2)
