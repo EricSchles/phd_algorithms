@@ -30,3 +30,5 @@ I will upload all of my notes, code, and attempts at the various homework assign
 * reference implementations - https://github.com/TheAlgorithms/Python
 * solutions - https://github.com/walkccc/CLRS
 
+
+Alright I have the basic sketch of the proof for explainers - 
