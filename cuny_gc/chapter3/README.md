@@ -1,0 +1,1 @@
+Chapter 3 is just proofs.  I'll probably do a primer on proofs and logs and exponentials for this one at some point.
