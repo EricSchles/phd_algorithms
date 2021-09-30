@@ -1,37 +1,40 @@
 import random
 from min_heap import MinHeap
 
-def pop_first(listing):
-    if listing == []:
-        return None
-    value = listing[0]
-    listing.remove(value)
-    return value
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
 
-def sort_lists_check(lists):
-    final_list = []
-    heap = MinHeap()
-    for l in lists:
-        for elem in l:
-            heap.push(elem)
-    while not heap.is_empty():
-        final_list.append(heap.pop())
-    return final_list
-
+    def __str__(self):
+        return repr(self.data)
+    
 def sort_lists(lists):
     final_list = []
     heap = MinHeap()
     for l in lists:
-        heap.push(l[0])
-    index = 0
+        heap.push((l.data, l))
     while not heap.is_empty():
-        cur = pop_first(lists)
-        if cur is not None:
-            final_list.append(heap.pop())
-        else:
-            index += 1      
+        data, node = heap.pop()
+        final_list.append(data)
+        node = node.next
+        if node:
+            heap.push((node.data, node))
     return final_list
 
+def to_linked_lists(lists):
+    linked_lists = []
+    # get heads
+    for l in lists:
+        linked_lists.append(Node(l[0]))
+    for index, l in enumerate(lists):
+        head = linked_lists[index]
+        cur = head
+        for elem in l[1:]:
+            cur.next = Node(elem)
+            cur = cur.next
+    return linked_lists
+        
 # Driver function
 if __name__ == "__main__":
     # case 1
@@ -39,7 +42,9 @@ if __name__ == "__main__":
     arr2 = [2,4,6,8]
     other_arr1 = arr1[:]
     other_arr2 = arr2[:]
-    new_list = sort_lists([arr1, arr2])
+    lists = [arr1, arr2]
+    linked_lists = to_linked_lists(lists)
+    new_list = sort_lists(linked_lists)
     other_arr = other_arr1 + other_arr2
     other_arr.sort()
     assert new_list  == other_arr
@@ -53,11 +58,8 @@ if __name__ == "__main__":
         lists.append(first[i-100: i])
     for l in lists:
         l.sort()
-    new_list = sort_lists(lists)
+    linked_lists = to_linked_lists(lists)
+    new_list = sort_lists(linked_lists)
     second.sort()
-    try:
-        assert new_list  == second
-    except:
-        import code
-        code.interact(local=locals())
+    assert new_list  == second
     
