@@ -18,6 +18,8 @@ The goal of this repo is to serve as a memorialization of the algorithms class I
 
 [course syllabus](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Computer-Science/Course-Listings/Spring-2019/Algorithms)
 
+[python data structures and algorithms book](https://runestone.academy/runestone/books/published/pythonds/index.html)
+
 ## How this will work
 
 I'm going to use the supporting material from MIT and stanford to review all the relevant course material.  As well as going through the course at the normal pace.  My plan is to do 1.5 hours of work on this class per day during the week.  And 3 hours each weekend day, starting august 26th, through the end of the class.
